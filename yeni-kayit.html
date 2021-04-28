@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>gI1w
-    
-</body>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/index.css" />
+    <title>Case Study</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="left">
+        <a href="/index.html" class="mdc-button mdc-button--raised">
+          <span class="material-icons-outlined"> chevron_left </span>
+          Listeye Dön
+        </a>
+      </div>
+      <h1>Case Study</h1>
+      <div class="new-sign">
+        <a href="/yeni-kayit.html" class="mdc-button mdc-button--raised">
+          <span class="material-icons-outlined"> add </span>
+          Yeni Kayıt
+        </a>
+      </div>
+    </header>
+
+    <div class="new-sign-container">
+        <div class="select-type">
+            <div class="mdc-form-field">
+                <div class="mdc-radio">
+                  <input
+                    class="mdc-radio__native-control"
+                    type="radio"
+                    id="radio-1"
+                    name="radios"
+                    value="movie"
+                  />
+                  <div class="mdc-radio__background">
+                    <div class="mdc-radio__outer-circle"></div>
+                    <div class="mdc-radio__inner-circle"></div>
+                  </div>
+                  <div class="mdc-radio__ripple"></div>
+                </div>
+                <label for="radio-1">Film</label>
+              </div>
+              <div class="mdc-form-field">
+                <div class="mdc-radio">
+                  <input
+                    class="mdc-radio__native-control"
+                    type="radio"
+                    id="radio-2"
+                    name="radios"
+                    value="series"
+                  />
+                  <div class="mdc-radio__background">
+                    <div class="mdc-radio__outer-circle"></div>
+                    <div class="mdc-radio__inner-circle"></div>
+                  </div>
+                  <div class="mdc-radio__ripple"></div>
+                </div>
+                <label for="radio-2">Dizi</label>
+              </div>
+        </div>
+      
+
+      <label class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-floating-label" id="my-label-id">Film / Dizi Adı</span>
+        <input class="mdc-text-field__input" id="name" type="text" aria-labelledby="my-label-id">
+      </label>
+
+      <label class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-floating-label" id="my-label-id">Puanı</span>
+        <input class="mdc-text-field__input point" type="text" aria-labelledby="my-label-id">
+      </label>
+
+      <button class="mdc-button mdc-button--raised save-new" type="reset">
+        <span class="mdc-button__label">Kaydet</span>
+      </button>
+
+      <div class="">
+
+      </div>
+    </div>
+
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

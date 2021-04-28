@@ -1,3 +1,7 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
 :root {
   --mdc-theme-primary: #a38c5b;
   --mdc-theme-secondary: #018786;
@@ -29,7 +33,6 @@ html {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -70,12 +73,39 @@ header .left {
   display: flex;
 }
 
-header .left > div .sort-options,
-header .left > div .kind-options {
-  display: none;
+header .left > div {
+  position: relative;
 }
 
-header .left > div .sort {
+header .left > div .options,
+header .left > div .options {
+  display: none;
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+  -webkit-transform: translate(0px, 100%);
+          transform: translate(0px, 100%);
+  background-color: #fff;
+  padding: 5px 10px;
+}
+
+header .left > div .options.active,
+header .left > div .options.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .left > div .options label,
+header .left > div .options label {
+  white-space: nowrap;
+}
+
+header .left .sort-container {
   margin-left: 50px;
 }
 
@@ -84,9 +114,23 @@ header > h1 {
   font-size: 2rem;
 }
 
-header .new-sign a {
-  display: block;
-  padding: 10px 20px;
-  color: #fff;
+.new-sign-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-sign-container > * {
+  margin-top: 30px;
 }
 /*# sourceMappingURL=index.css.map */

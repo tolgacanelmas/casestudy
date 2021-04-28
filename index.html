@@ -1,143 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./scss/index.css" />
     <title>Case Study</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="left">
-            <div>
-                <div class="mdc-touch-target-wrapper kinds">
-                    <button class="mdc-button mdc-button--raised">
-                        <span class="mdc-button__label">Türler</span>
-                    </button>
+      <div class="left">
+        <div class="kinds-container">
+          <button class="mdc-button mdc-button--raised kinds">
+            <span class="mdc-button__label">Türler</span>
+            <span class="material-icons-outlined"> keyboard_arrow_down </span>
+          </button>
+          <div class="options">
+            <div class="mdc-form-field">
+              <label for="check-item1"> Tümü </label>
+              <div
+                class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                style="
+                  --mdc-ripple-fg-size: 24px;
+                  --mdc-ripple-fg-scale: 1.66667;
+                  --mdc-ripple-left: 8px;
+                  --mdc-ripple-top: 8px;
+                "
+              >
+                <input
+                  type="checkbox"
+                  checked
+                  class="mdc-checkbox__native-control"
+                  id="check-item1"
+                />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path
+                      class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                    ></path>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
                 </div>
-                <div class="kind-options">
-                    <div class="mdc-form-field ">
-                        <label for="check-item1">
-                            Tümü
-                        </label>
-                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
-                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="check-item1">
-                            <div class="mdc-checkbox__background">
-                                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                    <path class="mdc-checkbox__checkmark-path" fill="none"
-                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
-                                </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                            </div>
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-
-                    </div>
-                    <div class="mdc-form-field ">
-                        <label for="check-item1">
-                            Filmler
-                        </label>
-                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
-                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="check-item1">
-                            <div class="mdc-checkbox__background">
-                                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                    <path class="mdc-checkbox__checkmark-path" fill="none"
-                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
-                                </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                            </div>
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-
-                    </div>
-                    <div class="mdc-form-field ">
-                        <label for="check-item1">
-                            Diziler
-                        </label>
-                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
-                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="check-item1">
-                            <div class="mdc-checkbox__background">
-                                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                    <path class="mdc-checkbox__checkmark-path" fill="none"
-                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
-                                </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                            </div>
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-                    </div>
-                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
             </div>
-            <div>
-                <div class="mdc-touch-target-wrapper sort">
-                    <button class="mdc-button mdc-button--raised">
-                        <span class="mdc-button__label">Sırala</span>
-                    </button>
+            <div class="mdc-form-field">
+              <label for="check-item1"> Filmler </label>
+              <div
+                class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                style="
+                  --mdc-ripple-fg-size: 24px;
+                  --mdc-ripple-fg-scale: 1.66667;
+                  --mdc-ripple-left: 8px;
+                  --mdc-ripple-top: 8px;
+                "
+              >
+                <input
+                  type="checkbox"
+                  class="mdc-checkbox__native-control"
+                  id="check-item1"
+                />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path
+                      class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                    ></path>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
                 </div>
-                <div class="sort-options">
-                    <div class="mdc-form-field ">
-                        <label for="check-item1">
-                            Puana göre (Azalan)
-                        </label>
-                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
-                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="check-item1">
-                            <div class="mdc-checkbox__background">
-                                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                    <path class="mdc-checkbox__checkmark-path" fill="none"
-                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
-                                </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                            </div>
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-
-                    </div>
-                    <div class="mdc-form-field ">
-                        <label for="check-item1">
-                            Puana göre (Artan)
-                        </label>
-                        <div class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
-                            style="--mdc-ripple-fg-size:24px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:8px; --mdc-ripple-top:8px;">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="check-item1">
-                            <div class="mdc-checkbox__background">
-                                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                    <path class="mdc-checkbox__checkmark-path" fill="none"
-                                        d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
-                                </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                            </div>
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-
-                    </div>
-                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
             </div>
+            <div class="mdc-form-field">
+              <label for="check-item1"> Diziler </label>
+              <div
+                class="mdc-checkbox mdc-checkbox--upgraded mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                style="
+                  --mdc-ripple-fg-size: 24px;
+                  --mdc-ripple-fg-scale: 1.66667;
+                  --mdc-ripple-left: 8px;
+                  --mdc-ripple-top: 8px;
+                "
+              >
+                <input
+                  type="checkbox"
+                  class="mdc-checkbox__native-control"
+                  id="check-item1"
+                />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path
+                      class="mdc-checkbox__checkmark-path"
+                      fill="none"
+                      d="M1.73,12.91 8.1,19.28 22.79,4.59"
+                    ></path>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h1>Case Study</h1>
-        <div class="new-sign">
-            <a href="/yeni-kayit.html" class="mdc-button mdc-button--raised">
-                <i class="fas fa-plus"></i>
-                Yeni Kayıt
-            </a>
+        <div class="sort-container">
+          <button class="mdc-button mdc-button--raised sort">
+            <span class="mdc-button__label">Sırala</span>
+            <span class="material-icons-outlined"> keyboard_arrow_down </span>
+          </button>
+          <div class="options">
+            <div class="mdc-form-field">
+              <label> Puana göre (Azalan) </label>
+            </div>
+            <div class="mdc-form-field">
+              <label> Puana göre (Artan) </label>
+            </div>
+          </div>
         </div>
-
+      </div>
+      <h1>Case Study</h1>
+      <div class="new-sign">
+        <a href="/yeni-kayit.html" class="mdc-button mdc-button--raised">
+          <span class="material-icons-outlined"> add </span>
+          Yeni Kayıt
+        </a>
+      </div>
     </header>
 
-    
+    <div class="main">
+      <div class="movies"></div>
+    </div>
 
-</body>
-
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

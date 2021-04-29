@@ -2,7 +2,7 @@
 @use "@material/line-ripple/mdc-line-ripple";
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
-@import 'variables';
+@import "variables";
 
 html[data-theme="dark"] {
   --mdc-theme-primary: #a38c5b;
@@ -29,8 +29,6 @@ html[data-theme="dark"] {
   --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
   --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
-
-  
 }
 
 html[data-theme="gray"] {
@@ -95,7 +93,6 @@ header {
 
     & > div {
       position: relative;
-      .options,
       .options {
         display: none;
         position: absolute;
@@ -104,13 +101,14 @@ header {
         transform: translate(0px, 100%);
         background-color: #fff;
         padding: 5px 10px;
+        z-index: 100;
 
         &.active {
           display: flex;
           flex-direction: column;
         }
 
-        label {
+        span {
           white-space: nowrap;
         }
       }
@@ -128,32 +126,62 @@ header {
 }
 
 .main {
-  padding: 20px 250px;
+  padding: 20px 17rem;
 
   .movies {
     .movie {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       background-color: #eeeeee;
-      margin: 10px;
+      margin: 10px 0px;
       padding: 15px;
       border-radius: 4px;
       border: 1px solid #f0f0f0;
 
-      &-name{
-
+      & > div {
       }
-      &-point{
+      &-name {
         display: flex;
         align-items: center;
-        & > span{
-          color: rgb(214, 202, 88);
+        position: relative;
+
+        &:hover {
+          span {
+            right: -25px;
+            position: absolute;
+            display: inline-block;
+            margin-left: 5px;
+            cursor: pointer;
+            color: #f00;
+          }
+        }
+
+        & > span {
+          display: none;
         }
       }
-      .give-point{
+      &-point {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > span {
+          color: var(--mdc-theme-primary);
+        }
+      }
+      .give-point {
         display: flex;
         flex-direction: column;
+        align-items: center;
+
+        span.material-icons-outlined {
+          &:first-child {
+            color: rgb(66, 201, 66);
+          }
+          &:last-child {
+            color: #f00;
+          }
+        }
       }
     }
   }

@@ -1,5 +1,9 @@
+$('html').attr("data-theme", 'orange')
 const theme = localStorage.getItem("theme")
-$('html').attr("data-theme", theme)
+if (theme != null) {
+  $('html').attr("data-theme", theme)
+
+}
 
 let newArray = ["all"];
 let filteredList = getFromLocalStorage();
@@ -54,7 +58,7 @@ function deleteItemFromArray(arr, name) {
 function deleteItem(name) {
   let array = getFromLocalStorage();
   saveLocalStorage(deleteItemFromArray(array, name))
-  filteredList = deleteItemFromArray(filteredList , name)
+  filteredList = deleteItemFromArray(filteredList, name)
   showList(filteredList)
 
   Swal.fire({

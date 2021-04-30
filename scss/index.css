@@ -2,10 +2,12 @@
 @use "@material/line-ripple/mdc-line-ripple";
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
-html[data-theme="dark"] {
+html[data-theme="orange"] {
   --mdc-theme-primary: #a38c5b;
-  --mdc-theme-secondary: #a59c88;
-  --mdc-theme-background: #fff;
+  --mdc-theme-secondary: #535353;
+  --mdc-theme-text: #535353;
+  --mdc-theme-background: #eeeeee;
+  --mdc-theme-star: #869622;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #b00020;
   --mdc-theme-on-primary: #fff;
@@ -30,10 +32,41 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="gray"] {
-  --mdc-theme-primary: #000;
-  --mdc-theme-secondary: #018786;
-  --mdc-theme-background: #fff;
+  --mdc-theme-primary: rgba(92, 92, 92, 0.801);
+  --mdc-theme-secondary: #b8b8b8;
+  --mdc-theme-text: #ffffff;
+  --mdc-theme-background: rgb(68, 68, 68);
+  --mdc-theme-star: #cfd4af;
   --mdc-theme-surface: #fff;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: #fff;
+  --mdc-theme-on-surface: #000;
+  --mdc-theme-on-error: #fff;
+  --mdc-theme-text-primary-on-background: rgba(0, 0, 0, 0.87);
+  --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-light: rgba(0, 0, 0, 0.87);
+  --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-light: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-primary-on-dark: white;
+  --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
+  --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
+  --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+}
+
+html[data-theme="blue"] {
+  --mdc-theme-primary: rgb(55, 86, 189);
+  --mdc-theme-secondary: #6490a5;
+  --mdc-theme-text: #ffffff;
+  --mdc-theme-background: rgb(120, 150, 189);
+  --mdc-theme-surface: #fff;
+  --mdc-theme-star: #ddff00;
   --mdc-theme-error: #b00020;
   --mdc-theme-on-primary: #fff;
   --mdc-theme-on-secondary: #fff;
@@ -91,7 +124,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e7e7e7;
+  background-color: #eeeeee;
 }
 
 header .left {
@@ -141,6 +174,7 @@ header > h1 {
 
 .main {
   padding: 20px 17rem;
+  position: relative;
 }
 
 .main .movies .movie {
@@ -153,24 +187,15 @@ header > h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #eeeeee;
+  background-color: var(--mdc-theme-background);
   margin: 10px 0px;
   padding: 15px;
+  color: var(--mdc-theme-text);
   border-radius: 4px;
   border: 1px solid #f0f0f0;
 }
 
-.main .movies .movie-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.main .movies .movie-name:hover span {
+.main .movies .movie:hover .delete-item {
   right: -25px;
   position: absolute;
   display: inline-block;
@@ -179,7 +204,23 @@ header > h1 {
   color: #f00;
 }
 
-.main .movies .movie-name > span {
+.main .movies .movie > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main .movies .movie-name > p {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .movies .movie-name > p > span {
   display: none;
 }
 
@@ -196,7 +237,7 @@ header > h1 {
 }
 
 .main .movies .movie-point > span {
-  color: var(--mdc-theme-primary);
+  color: var(--mdc-theme-star);
 }
 
 .main .movies .movie .give-point {
@@ -207,9 +248,12 @@ header > h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .main .movies .movie .give-point span.material-icons-outlined:first-child {
@@ -218,6 +262,62 @@ header > h1 {
 
 .main .movies .movie .give-point span.material-icons-outlined:last-child {
   color: #f00;
+}
+
+.main .theme-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  top: 150px;
+  position: fixed;
+  width: 200px;
+  right: 0px;
+  background-color: #ececec;
+  -webkit-transform: translate(100%, 0px);
+          transform: translate(100%, 0px);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.main .theme-color.active {
+  -webkit-transform: translate(0%, 0px);
+          transform: translate(0%, 0px);
+}
+
+.main .theme-color > span {
+  position: absolute;
+  cursor: pointer;
+  left: 0px;
+  top: 0px;
+  -webkit-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+  padding: 10px 15px;
+  background-color: #ececec;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.main .theme-color .container .mdc-touch-target-wrapper:first-child .mdc-checkbox__background {
+  background-color: #a38c5b !important;
+}
+
+.main .theme-color .container .mdc-touch-target-wrapper:nth-child(2) .mdc-checkbox__background {
+  background-color: gray !important;
+}
+
+.main .theme-color .container .mdc-touch-target-wrapper:last-child .mdc-checkbox__background {
+  background-color: #3756bd !important;
 }
 
 .new-sign-container {
@@ -238,5 +338,11 @@ header > h1 {
 
 .new-sign-container > * {
   margin-top: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=index.css.map */

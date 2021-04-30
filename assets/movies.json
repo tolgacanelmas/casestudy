@@ -1,102 +1,102 @@
 [
     {
         "name": "Baba (1972)",
-        "point": "8",
+        "point": 8,
         "kind": "movie"
     },
     {
         "name": "Baba 2 (1974)",
-        "point": "9",
+        "point": 9,
         "kind": "movie"
     },
     {
         "name": "Kara Şövalye",
-        "point": "8",
+        "point": 8,
         "kind": "movie"
     },
     {
         "name": "Taht Oyunları (2011)",
-        "point": "6",
+        "point": 6,
         "kind": "series"
     },
     {
         "name": "Breaking Bad (2012)",
-        "point": "9",
+        "point": 9,
         "kind": "series"
     },
     {
         "name": "House Of Cards (2011)",
-        "point": "8",
+        "point": 8,
         "kind": "series"
     },
     {
         "name": "Lord Of The Rings (206)",
-        "point": "10",
+        "point": 10,
         "kind": "movie"
     },
     {
         "name": "Harry Potter (2005)",
-        "point": "8",
+        "point": 8,
         "kind": "movie"
     },
     {
         "name": "OZ (1999)",
-        "point": "8",
+        "point": 8,
         "kind": "series"
     },
     {
         "name": "House (2009)",
-        "point": "8",
+        "point": 8,
         "kind": "series"
     },
     {
         "name": "Esaretin Bedeli (2007)",
-        "point": "9",
+        "point": 9,
         "kind": "movie"
     },
     {
         "name": "Prison Break (2005)",
-        "point": "8",
+        "point": 8,
         "kind": "series"
     },
     {
         "name": "Fringe (2005)",
-        "point": "8",
+        "point": 8,
         "kind": "series"
     },
     {
         "name": "Spartacus (2010)",
-        "point": "8",
+        "point": 8,
         "kind": "series"
     },
     {
         "name": "12 Kızgın Adam (1957)",
-        "point": "9",
+        "point": 9,
         "kind": "movie"
     },
     {
         "name": "Dövüş Kulubü",
-        "point": "9",
+        "point": 9,
         "kind": "movie"
     },
     {
         "name": "Guguk Kuşu",
-        "point": "8",
-        "kind": "9"
+        "point": 8,
+        "kind": "movie"
     },
     {
         "name": "Matrix",
-        "point": "9",
+        "point": 9,
         "kind": "movie"
     },
     {
         "name": "Başlangıç",
-        "point": "8",
+        "point": 8,
         "kind": "movie"
     },
     {
         "name": "Memento",
-        "point": "8",
+        "point": 8,
         "kind": "movie"
     }
 ]
